@@ -1,8 +1,15 @@
 from django.contrib import admin
-from catalog.models import Category, Product
+from catalog.models import Category, Product, StoreContacts
 
 
 # Register your models here.
+
+@admin.register(StoreContacts)
+class StoreContactsAdmin(admin.ModelAdmin):
+    list_display = [
+        'name',
+        'link'
+    ]
 
 
 @admin.register(Category)
@@ -24,4 +31,3 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ['category']
     ordering = ['name']
     search_fields = ['name', 'description']
-

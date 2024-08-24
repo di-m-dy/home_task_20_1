@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from catalog.models import Category, Product
+from catalog.models import Category, Product, StoreContacts
 
 
 def index(request):
@@ -14,6 +14,7 @@ def contacts(request):
     """
     Контроллер для страницы контактов
     """
+    contacts_data = StoreContacts.objects.all()
     if request.method == "POST":
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
@@ -24,4 +25,4 @@ def contacts(request):
             "email": email
         }
         return render(request, 'catalog/thanx.html', context)
-    return render(request, 'catalog/contacts.html')
+    return render(request, 'catalog/contacts.html', {"contacts": contacts_data})
