@@ -62,3 +62,22 @@ class StoreContacts(models.Model):
     class Meta:
         verbose_name = 'контакт'
         verbose_name_plural = 'контакты'
+
+
+class UserContacts(models.Model):
+    """
+    Модель для контактной информации обратной связи пользователей
+        first_name - Имя пользователя
+        last_name - Фамилия пользователя
+        email - Электронная почта пользователя
+    """
+    first_name = models.CharField(max_length=100, verbose_name='Имя пользователя')
+    last_name = models.CharField(max_length=100, verbose_name='Фамилия пользователя')
+    email = models.CharField(max_length=100, verbose_name='Электронная почта пользователя')
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
+    class Meta:
+        verbose_name = 'контакт пользователя'
+        verbose_name_plural = 'контакты пользователя'

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from catalog.models import Category, Product, StoreContacts
+from catalog.models import Category, Product, StoreContacts, UserContacts
 
 
 # Register your models here.
@@ -9,6 +9,15 @@ class StoreContactsAdmin(admin.ModelAdmin):
     list_display = [
         'name',
         'link'
+    ]
+
+
+@admin.register(UserContacts)
+class UserContactsAdmin(admin.ModelAdmin):
+    list_display = [
+        'first_name',
+        'last_name',
+        'email'
     ]
 
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from catalog.models import Category, Product, StoreContacts
+from catalog.models import Category, Product, StoreContacts, UserContacts
 
 
 def index(request):
@@ -24,5 +24,6 @@ def contacts(request):
             "last_name": last_name,
             "email": email
         }
+        UserContacts.objects.create(first_name=first_name, last_name=last_name, email=email)
         return render(request, 'catalog/thanx.html', context)
     return render(request, 'catalog/contacts.html', {"contacts": contacts_data})
