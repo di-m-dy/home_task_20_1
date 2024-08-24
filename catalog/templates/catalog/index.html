@@ -1,0 +1,93 @@
+{% extends "catalog/base.html" %}
+{% block title %}Main Page{% endblock %}
+{% block content %}
+<main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">Local Farmers Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                    aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                 aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-2">
+        <div class="bg-body-tertiary p-4 rounded">
+            <div class="col-sm-8 py-4 mx-auto">
+                <h1 class="display-5 fw-medium">Local Farmers Store</h1>
+                <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade my-4 w-75"
+                     data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                            <img src="/static/images/meat.png" class="d-block w-100" alt="meat_image">
+                            <div class="carousel-caption md-none d-md-block">
+                                <h5>Мясная продукция</h5>
+                                <p>Все виды мяса на любой вкус</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/static/images/milk.png" class="d-block w-100" alt="milk_image">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Молочная продукция</h5>
+                                <p>Все что связано с молоком</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/static/images/fish.png" class="d-block w-100" alt="fish_image">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Рыба и морепродукты</h5>
+                                <p>Любимые деликатесы живущие в воде</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/static/images/vegetables.png" class="d-block w-100" alt="vegetables_image">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Овощи и Фрукты</h5>
+                                <p>Вкусные, свежие, экологически чистые</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/static/images/other.png" class="d-block w-100" alt="other_image">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Другое</h5>
+                                <p>Хлеб, мед, масла, зерна и многое другое</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <p class="fs-5">Онлайн магазин фермерских продуктов</p>
+                <p>В нашем магазине вы можете приобрести качественную продукцию лучших фермеров страны</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
