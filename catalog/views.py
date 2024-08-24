@@ -1,11 +1,13 @@
 from django.shortcuts import render
+from catalog.models import Category, Product
 
 
 def index(request):
     """
     Контроллер для главной страницы
     """
-    return render(request, 'catalog/index.html')
+    product_data = list(Product.objects.all())[-6:]
+    return render(request, 'catalog/index.html', {"products": product_data})
 
 
 def contacts(request):
