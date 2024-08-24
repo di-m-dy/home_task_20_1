@@ -1,0 +1,133 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Мясная Продукция",
+      "description": "Все виды мяса и мясные изделия"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Молочная Продукция",
+      "description": "Все виды молока, сыры и кисломолочная продукция"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Рыба и Морепродукты",
+      "description": "Все виды рыбы и морские деликатессы"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "name": "Овощи и Фрукты",
+      "description": "Свежее и экологически чистое"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+      "name": "Другое",
+      "description": "От хлеба до меда и грибов"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Мраморная Говядина",
+      "description": "Свежая, мягкая мраморная говядина отборных сортов",
+      "image": "product_image/Marbled_Beef_on_Cutting_Board_10RepQU.webp",
+      "category": 1,
+      "price": "1500.00",
+      "created_at": "2024-08-24T21:22:32.948Z",
+      "updated_at": "2024-08-24T21:22:32.948Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Куриное Филе",
+      "description": "Нежное куриное филе, всегда свежее",
+      "image": "product_image/Warm_Homemade_Bread_Ad_DALLE_July_25.webp",
+      "category": 1,
+      "price": "1000.00",
+      "created_at": "2024-08-24T21:25:24.254Z",
+      "updated_at": "2024-08-24T21:25:24.254Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Домашний Хлеб",
+      "description": "Свежий хлеб из домашней печи.",
+      "image": "product_image/Cozy_Kitchen_Bread_Ad.webp",
+      "category": 5,
+      "price": "200.00",
+      "created_at": "2024-08-24T21:26:13.844Z",
+      "updated_at": "2024-08-24T21:26:13.844Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Корнишоны",
+      "description": "Свежие и хрустящие корнишоны",
+      "image": "product_image/Bright_Kitchen_with_Cornichons_1.webp",
+      "category": 4,
+      "price": "400.00",
+      "created_at": "2024-08-24T21:27:00.877Z",
+      "updated_at": "2024-08-24T21:27:00.877Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Форель речная",
+      "description": "Свежая речная форель",
+      "image": "product_image/Pristine_kitchen_with_trout.webp",
+      "category": 3,
+      "price": "1200.00",
+      "created_at": "2024-08-24T21:29:42.820Z",
+      "updated_at": "2024-08-24T21:29:42.820Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "Свежие Креветки",
+      "description": "Креветки, выращенные на собственной ферме",
+      "image": "product_image/Fresh_Shrimp_Scene.webp",
+      "category": 3,
+      "price": "2000.00",
+      "created_at": "2024-08-24T21:32:17.790Z",
+      "updated_at": "2024-08-24T21:32:17.790Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "name": "Деревенское Молоко",
+      "description": "Свежевыдоенное деревенское молоко",
+      "image": "product_image/Serene_Kitchen_Setting_1.webp",
+      "category": 2,
+      "price": "300.00",
+      "created_at": "2024-08-24T21:33:15.907Z",
+      "updated_at": "2024-08-24T21:33:15.907Z"
+    }
+  }
+]
